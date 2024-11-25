@@ -101,10 +101,6 @@ public class PlayerService {
         }
     }
 
-   /* public List<PlayerGameScore> getLeaderBoard(){
-        return null;
-    }*/
-
     public ScoreBoard getScoreBoard() {
         var tournament = Tournament.getInstance();
         var labels = new ArrayList<String>();
@@ -128,8 +124,6 @@ public class PlayerService {
 
     private static List<String> getScores(PlayerScoresEntity score, Tournament tournament) {
 
-        //for(PlayerScoresEntity score: playerRepository.findAll()){
-        //for(PlayerScore score:playerRepository.get()){
         List<String> data = new ArrayList<>();
         var name = score.getName();
         data.add(name);
