@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+  ckafka:
+    image: confluentinc/confluent-local:7.4.1
+    ports:
+      - "8082:8082"
+      - "9092:9092"
+      - "9101:9101"

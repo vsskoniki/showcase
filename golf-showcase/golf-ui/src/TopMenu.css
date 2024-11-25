@@ -1,0 +1,77 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top-menu {
+  position: sticky; /* This makes the menu stay at the top */
+  top: 0; /* Specifies the distance from the top of the page */
+  background-color: #333;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000; /* Ensures the menu stays on top of other content */
+}
+
+.menu-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list li {
+  margin: 0 20px;
+}
+
+.menu-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-list a:hover {
+  background-color: #575757;
+  border-radius: 4px;
+}
+
+.section {
+  padding: 60px 20px;
+  height: 100vh; /* Ensures each section takes full viewport height */
+  border-bottom: 2px solid #eee; /* Adds a bottom border between sections */
+}
+
+h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th {
+  text-align: left;
+  padding: 10px;
+  width: 150px;
+}
+
+td {
+  padding: 10px;
+}
