@@ -1,0 +1,25 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    
+    <table>
+      <tbody>
+        <tr>
+          <th><label for="name">Name:</label></th>
+          <td><input type="text" id="name" name="name" ngModel required>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="hole">Hole:</label></th>
+          <td><input type="number" id="hole" name="hole" ngModel required>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="score">Score:</label></th>
+          <td><input type="number" id="score" name="score" ngModel required>
+          </td>
+        </tr>
+        <tr><td></td><td><button type="submit" [disabled]="!myForm.valid">Submit</button></td></tr>
+        <tr><td></td><td>{{status}}</td></tr>
+      </tbody>
+    </table>
+    
+  </form>

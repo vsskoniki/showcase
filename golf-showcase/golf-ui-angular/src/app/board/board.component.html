@@ -1,0 +1,53 @@
+<div *ngIf="isLoading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<div >
+    <h3>Leader Board</h3>
+    <div *ngIf="tournament; else noData">
+        <div class="center-div"></div>
+        <div>
+        <h4>Tournament</h4>
+        <table border="1">
+        <thead>
+            <tr>
+                <th>Holes</th>
+            <th *ngFor="let column of getHoles(); let i = index">
+                {{ column }}
+            </th>
+            </tr>
+            <tr>
+                <th>Pars</th>
+            <th *ngFor="let column of getPars(); let i = index">
+                {{ column }}
+            </th>
+            </tr>
+        </thead>
+        
+        </table>
+    </div>
+    </div>
+    <div *ngIf="scoreBoard;">
+        <h4>Scores</h4>
+        <table border="1">
+        <thead>
+            <tr>
+                <th>Holes</th>
+            <td *ngFor="let column of scoreBoard.fields; let i = index">
+                {{ column }}
+            </td>
+            </tr>
+            <tr *ngFor="let row of scoreBoard.rows; let i = index">
+                <th>Scores</th>
+            <td *ngFor="let column of row; let j = index">
+                {{ column }}
+            </td>
+            </tr>
+        </thead>
+        
+        </table>
+    </div>
+  
+  <ng-template #noData>
+    <p>No data available.</p>
+  </ng-template>
+</div>
